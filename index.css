@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0px;
+    height: 100%;
+ }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #282c34;
+    margin: 0px;
+    min-height: 100%;
+    color: white;
+}
+
+#links-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}

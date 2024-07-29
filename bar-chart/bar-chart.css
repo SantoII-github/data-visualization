@@ -1,0 +1,25 @@
+#bar-chart {
+    text-align: center;
+}
+
+.bar {
+    fill: white;
+}
+
+.bar:hover {
+    fill: blue;
+}
+
+.tooltip 
+{	
+    position: absolute;			
+    text-align: center;			
+    width: 140px;					
+    height: auto;					
+    padding: 10px;				
+    font: 12px sans-serif;		
+    background: black;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
