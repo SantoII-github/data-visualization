@@ -82,6 +82,7 @@ const buildScatterplot = async () => {
                           ${d.Doping === "" ? "" : "<br><br>" + d.Doping}`)
                       .style("left", event.pageX + 10 + "px")
                       .style("top", event.pageY - 15 + "px");
+            tooltip.attr("data-year", d.Year);
           })
           .on("mouseout", function(d) {
             tooltip
