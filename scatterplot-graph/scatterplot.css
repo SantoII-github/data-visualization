@@ -1,19 +1,11 @@
-#bar-chart {
-    text-align: center;
-}
-
-.bar {
+.legend-text {
     fill: white;
-}
-
-.bar:hover {
-    fill: blue;
 }
 
 .tooltip {	
     position: absolute;			
     text-align: center;			
-    width: 140px;					
+    width: 200px;					
     height: auto;					
     padding: 10px;				
     font: 12px sans-serif;		
@@ -21,4 +13,12 @@
     border: 0px;		
     border-radius: 8px;			
     pointer-events: none;			
+}
+
+.doping-true {
+    fill: #F26419;
+}
+
+.doping-false {
+    fill: #316993;
 }
