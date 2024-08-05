@@ -65,7 +65,7 @@ const buildHeatMap = async () => {
     // Legend
     const legendValues = [1, 0.75, 0.5, 0.25, 0]
     const legendScale = d3.scaleSequential()
-                            .domain([0, 1])
+                            .domain([1, 0])
                             .interpolator(d3.interpolateRdYlBu);
     const legendToTemp = d3.scaleBand(legendValues.reverse(), d3.extent(dataset, d => d.variance));
     const tempBreakpoints = legendValues.map(d => 8.66 + legendToTemp(d));
