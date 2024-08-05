@@ -2,6 +2,10 @@
     fill: white;
 }
 
+.dot {
+    stroke: #000;
+}
+
 .tooltip {	
     position: absolute;			
     text-align: center;			
@@ -17,8 +21,10 @@
 
 .doping-true {
     fill: #F26419;
+    stroke: #000;
 }
 
 .doping-false {
     fill: #316993;
+    stroke: #000;
 }

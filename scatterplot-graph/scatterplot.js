@@ -89,7 +89,7 @@ const buildScatterplot = async () => {
               .transition()
               .duration(400)
               .style("opacity", 0);
-          });;
+          });
 
 }
 

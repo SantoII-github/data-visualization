@@ -86,6 +86,14 @@ const buildBarGraph = async () => {
          .attr("transform", `translate(0, ${graphHeight - marginBottom})`)
          .call(xAxis)
          .attr("id", "x-axis");
+
+    const leftLabel = svg.append("text")
+                         .attr("x", marginLeft - 80)
+                         .attr("y", marginTop + 30)
+                         .attr("class", "axis-label")
+                         .text("Gross Domestic Product")
+                         .style("text-anchor", "end")
+                         .attr('transform', 'rotate(-90)')
 }
 
 buildBarGraph();

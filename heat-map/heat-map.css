@@ -1,18 +1,6 @@
-#bar-chart {
-    text-align: center;
-}
-
-.bar {
-    fill: white;
-}
-
-.axis-label {
-    fill: white;
-    font-size: 22px;
-}
-
-.bar:hover {
-    fill: blue;
+.cell:hover {
+    stroke: black;
+    stroke-width: 1;
 }
 
 .tooltip {	
