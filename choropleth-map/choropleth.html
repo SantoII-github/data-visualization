@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temp</title>
-    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Choropleth Map</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="choropleth.css">
 </head>
 <body>
+    <h1 id="title">United States Educational Attainment</h1>
+    <h2 id="description">Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)</h2>
+    <div id="choropleth-map"></div>
     <a href="../index.html">Return</a>
 </body>
+<script src="https://unpkg.com/topojson-client@3"></script>
+<script type="module" src="choropleth.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>

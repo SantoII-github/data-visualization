@@ -11,7 +11,7 @@ const buildHeatMap = async () => {
     // Graph Dimension Declarations
     const graphWidth = 1200;
     const graphHeight = 500;
-    const marginLeft = 60;
+    const marginLeft = 65;
     const marginRight = 40;
     const marginBottom = 40;
     const marginTop = 40;
@@ -75,8 +75,9 @@ const buildHeatMap = async () => {
                         .attr("width", graphWidth)
                         .attr("height", 100)
                         .attr("id", "legend");
-                        
-    const legendAxis = d3.axisBottom(legendAxisScale).ticks(5).tickFormat(d3.format('.1f'));
+
+    const formatCelsius = d => d.toFixed(1) + "ºC";
+    const legendAxis = d3.axisBottom(legendAxisScale).ticks(5).tickFormat(formatCelsius);
     legend.append("g")
             .attr("transform", `translate(${(graphWidth / 2 - 150)}, 30)`)
             .call(legendAxis)
