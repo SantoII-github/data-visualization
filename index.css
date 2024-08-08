@@ -28,4 +28,12 @@ a {
     color: white;
     text-decoration: none;
     margin: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+a:hover {
+    color: #282c34;
+    background-color: white;
 }

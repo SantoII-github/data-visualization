@@ -37,8 +37,6 @@ const buildChoropleth = async () => {
     const legendScale = d3.scaleSequential()
                             .domain([1, 0])
                             .interpolator(d3.interpolatePuBuGn);
-    // const legendToEdu = d3.scaleBand(legendValues, d3.extent(educationData, d => d.bachelorsOrHigher));
-    // const eduBreakpoints = legendValues.map(d => legendToEdu(d));
     const legendAxisScale = d3.scaleLinear()
                                 .domain(d3.extent(educationData, d => d.bachelorsOrHigher).reverse().map(d => d/100))
                                 .range([0, legendHeight]).nice();
