@@ -9,7 +9,7 @@ const fetchData = async (url) => {
 
 const buildTreemap = async () => {
     const graphWidth = 1400;
-    const graphHeight = 900;
+    const graphHeight = 650;
     const legendWidth = 120;
     const colors = [
         '#1f77b4',
@@ -60,7 +60,7 @@ const buildTreemap = async () => {
             .append("rect")
                 .attr("width", 30)
                 .attr("height", 30)
-                .attr("y", (d, i) => 80 + (40 * i))
+                .attr("y", (d, i) => 10 + (40 * i))
                 .attr("x", 25)
                 .attr("fill", d => colorScale(d))
                 .attr("class", "legend-item");
@@ -69,7 +69,7 @@ const buildTreemap = async () => {
                 .data(platforms)
                 .enter()
                 .append("text")
-                    .attr("y", (d, i) => 100 + (40 * i))
+                    .attr("y", (d, i) => 30 + (40 * i))
                     .attr("x", 62)
                     .text(d => d)
                     .attr("fill", "white");

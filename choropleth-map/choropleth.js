@@ -11,7 +11,7 @@ const fetchData = async (url) => {
 const buildChoropleth = async () => {
     // Graph Dimension Declarations
     const graphWidth = 1100;
-    const graphHeight = 700;
+    const graphHeight = 675;
     const legendHeight = 250;
     const legendWidth = 30;
     const legendX = 975;
