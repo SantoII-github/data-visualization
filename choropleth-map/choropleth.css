@@ -15,3 +15,8 @@
     stroke: black;
     stroke-width: 1;
 }
+
+#choropleth-map {
+    width: 100%;
+    height: auto;
+}

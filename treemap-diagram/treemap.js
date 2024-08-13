@@ -8,9 +8,9 @@ const fetchData = async (url) => {
 }
 
 const buildTreemap = async () => {
-    const graphWidth = 1400;
-    const graphHeight = 650;
-    const legendWidth = 120;
+    const legendWidth = Math.min(120, screen.width * 0.2);
+    const graphWidth = Math.min(1500, screen.width * 0.8) - legendWidth;
+    const graphHeight = Math.min(630, screen.height * 0.8);
     const colors = [
         '#1f77b4',
         '#aec7e8',
@@ -54,14 +54,17 @@ const buildTreemap = async () => {
                      .attr("height", graphHeight)
                      .attr("id", "legend");
 
+    const legendItemPadding = 5;
+    const legendItemHeight = (graphHeight - legendItemPadding * platforms.length)/platforms.length;
+
     legend.selectAll("rect")
             .data(platforms)
             .enter()
             .append("rect")
-                .attr("width", 30)
-                .attr("height", 30)
-                .attr("y", (d, i) => 10 + (40 * i))
-                .attr("x", 25)
+                .attr("width", legendItemHeight)
+                .attr("height", legendItemHeight)
+                .attr("y", (d, i) => (legendItemHeight + legendItemPadding) * i)
+                .attr("x", 13)
                 .attr("fill", d => colorScale(d))
                 .attr("class", "legend-item");
 
@@ -69,8 +72,8 @@ const buildTreemap = async () => {
                 .data(platforms)
                 .enter()
                 .append("text")
-                    .attr("y", (d, i) => 30 + (40 * i))
-                    .attr("x", 62)
+                    .attr("y", (d, i) => (legendItemHeight + legendItemPadding) * i + 20)
+                    .attr("x", legendItemHeight * 1.5 + legendItemPadding)
                     .text(d => d)
                     .attr("fill", "white");
 
@@ -94,6 +97,7 @@ const buildTreemap = async () => {
                     .data(root.leaves())
                     .enter()
                     .append("g")
+                    .attr("class", "cell")
                     .attr("transform", d => `translate(${d.x0}, ${d.y0})`)
                     .on("mousemove", function(event, d) {
                         tooltip.transition()

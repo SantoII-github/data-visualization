@@ -22,7 +22,8 @@ const buildChoropleth = async () => {
     const svg = d3.select("#choropleth-map")
         .append("svg")
         .attr("width", graphWidth)
-        .attr("height", graphHeight);
+        .attr("height", graphHeight)
+        .attr("id", "choro-svg");
     
     const countyData = await fetchData(COUNTY_URL);
     const educationData = await fetchData(EDUCATION_URL);

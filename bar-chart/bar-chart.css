@@ -27,3 +27,8 @@
     border-radius: 8px;			
     pointer-events: none;			
 }
+
+#bar-chart {
+    width: 100%;
+    height: auto;
+}

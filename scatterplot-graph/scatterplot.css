@@ -28,3 +28,8 @@
     fill: #316993;
     stroke: #000;
 }
+
+#scatterplot-graph {
+    width: 100%;
+    height: auto;
+}
